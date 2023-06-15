@@ -1,27 +1,52 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
 
-const parent = React.createElement("div", {id: 'parent'}, 
-    [
-        React.createElement("div", {id:"child"}, 
-            [React.createElement("h1", {}, "This is Namaste React 🚀"), 
-            React.createElement("h2", {}, "by Abhishek Batra")]
-        ),
-        React.createElement("div", 
-        {id:"child"}, [React.createElement("h1", {}, "I'm a h1 tag"), 
-        React.createElement("h2", {}, "I'm a h2 tag")])
-    ]
+//React.createElement => React Element => JS Object => HTMLElement(render )
+
+// const heading = React.createElement(
+//     "h1",
+//     { id: 'heading' },
+//     "Namaste React 🚀"
+// )
+// console.log(heading);
+
+//JSX - HTML like or XML like syntax 
+//JSX => Babel transpiles it to React.createElement => ReactElement-> JS Object => HTMLElement(render)
+
+//React Element
+// const heading = (
+//     <h1 className="heading" tabIndex={1}>
+//         Namaste React using JSX</h1>
+// ); //JS can't read this directly
+
+// const Title = () => (
+//     <h1 className="head" tabIndex="">
+//         Namaste React using JSX 🚀 
+//     </h1>
+// )
+
+const elem = <span>React Element</span>;
+
+const title = (
+    <h1 className="head" tabIndex="">
+        {elem}
+        Namaste React using JSX 🚀 
+    </h1>
 );
-console.log(parent); //object
-
-//JSX -> Why JSX is introduced => to make life easier writing code or react.
- 
 
 
 
-// const heading = React.createElement("h1", { id: 'heading' }, "Hello World from React!");
-// console.log(heading);//return an object
-const root = ReactDOM.createRoot(document.getElementById("root"));
+//React Functional Component
+const HeadingComponent = () => (
+    <>
+        <div id="container">
+            {title}
+            <h1 className="heading ">Namaste React Functional Component</h1>
+        </div>
+        <div id="container2"></div>
+    </>
+)
 
-// root.render(heading);
-root.render(parent);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(heading)// it will replace whatever we have in the root
+root.render(<HeadingComponent />);
