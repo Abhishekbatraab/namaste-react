@@ -18,3 +18,18 @@
 - HTTPs
 - Tree shaking- remove unused code    
 - different dev and prod bundles 
+
+# Namaste Food
+
+# React Hooks
+(Normal JS utility functions) provided by React library
+
+useState()
+useEffect()
+
+
+
+
+
+
+
