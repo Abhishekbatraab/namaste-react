@@ -27,6 +27,10 @@
 useState()
 useEffect()
 
+# Two types of routing in web apps
+-Client side Routing
+-Server side routing
+
 
 
 
